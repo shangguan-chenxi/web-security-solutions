@@ -15,7 +15,7 @@
 */
 
 session_start();
-$TOKEN_SOURCE = "Test12345qazXSWedcVFR--Admin++Manage**CSRF||"; // source string of csrf token
+$TOKEN_SOURCE = "Test12345qazXSWedcVFR".mt_rand()."--Admin++Manage**CSRF||"; // source string of csrf token
 $TIME_LIMIT = 1 * 60; //Pre-defined lifespan of the CSRF token (in seconds)
 
 /*
