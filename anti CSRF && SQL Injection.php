@@ -27,7 +27,8 @@ Para:
     $source: a string for generating a CSRF token
 */
 function generate_csrf_token($source){
-    $token = hash("sha256", $source.date("Y:m:d:h:i:s"));
+    //$token = hash("sha256", $source.date("Y:m:d:h:i:s"));
+    $token = hash("sha256", $source.rand());
     $_SESSION["csrf_token"] = $token;
     $_SESSION["token_time"] = time();
     return $token;
