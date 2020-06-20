@@ -111,7 +111,7 @@ if (isset($_POST['login'])){
     <!-- Attach the CSRF token to the form, put it in a hidden text box -->
     <input type="hidden" name="csrf_token" id="csrf_token" value="<?php echo generate_csrf_token($TOKEN_SOURCE);?>"/>
     <p1><strong>User:</strong> <input type="text" name="id" id="loginaInput" placeholder="Username" required/></br> </p1>
-    <p2><strong>Pass:</strong> <input type="text" name="pwd" id="loginpInput " placeholder="Password" required/> </br></p2>
+    <p2><strong>Pass:</strong> <input type="password" name="pwd" id="loginpInput " placeholder="Password" required/> </br></p2>
     <input name="login" type="submit" value="Submit">
 </div>
 </form>
